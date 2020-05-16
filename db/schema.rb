@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_15_191337) do
+ActiveRecord::Schema.define(version: 2020_05_16_214245) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2020_05_15_191337) do
 
   create_table "groups", force: :cascade do |t|
     t.string "name"
-    t.string "icon"
+    t.string "icon", default: "https://via.placeholder.com/50x50"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

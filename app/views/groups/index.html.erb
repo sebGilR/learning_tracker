@@ -1,0 +1,13 @@
+<h2>Groups</h2>
+<% @groups.each do |g| %>
+  <%= link_to group_path(g) do %>
+    <div>
+      <%= image_tag(g.icon, class: "group__thumbnail") %>
+      <div>
+        <p><%= g.name %></p>
+      </div>
+      <span><%= g.created_at.strftime('%d %b %Y') %></span>
+    </div>
+  <% end %>
+<% end %>
+<%= link_to "Create new", new_group_path %>

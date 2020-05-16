@@ -1,0 +1,13 @@
+  <h2><%= @title %></h2>
+<span>Total: <%= @total %></span>
+<% @sessions.each do |s| %>
+  <div>
+    <%= g_icon(s) %>
+    <div>
+      <p><%= s.name %></p>
+      <strong><%= s.amount %></strong>
+    </div>
+    <span><%= s.created_at.strftime('%d %b %Y') %></span>
+  </div>
+<% end %>
+<%= link_to "Add new", new_session_path %>
