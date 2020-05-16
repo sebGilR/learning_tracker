@@ -1,0 +1,10 @@
+<h1>Login</h1>
+<%= form_tag login_path do |form| %>
+  <div>
+    <%= label_tag :username, "Username" %>
+    <%= email_field_tag :username, placeholder: "username" %>
+  </div>
+  <div>
+    <%= submit_tag "Login" %>
+  </div>
+<% end %>
