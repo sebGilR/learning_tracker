@@ -9,7 +9,11 @@ class SessionsController < ApplicationController
     @session = current_user.sessions.build(session_params)
     
     if @session.save
-      redirect_to root_url, notice: "Session saved"
+      if params[:group] != nil
+        group = Group.find_by(name: params[:group])
+        group.sessions << @session
+      end
+      redirect_to session_url(@session), notice: "Session saved"
     else
       render :new
     end

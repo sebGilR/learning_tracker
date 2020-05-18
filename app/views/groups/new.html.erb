@@ -1,0 +1,8 @@
+<h2>Create group</h2>
+<%= form_with model: @group do |f| %>
+  <%= f.label :name, "Name" %><br>
+  <%= f.text_field :name %><br><br>
+  <%= f.label :icon, "Icon URL" %><br>
+  <%= f.text_field :icon, placeholder: " " %><br><br>
+  <%= f.submit "Create", disable_with: 'Creating...' %>
+<% end %>

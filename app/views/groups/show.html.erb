@@ -5,3 +5,11 @@
 
 <h3>Group transactions</h3>
 
+<% @group.sessions.each do |s| %>
+  <div>
+    <h4><%= s.author.name %></h4>
+    <p><%= s.name %></p>
+    <strong><%= s.amount %></strong>
+    <span><%= s.created_at.strftime('%d %b %Y') %></span>
+  </div>
+<% end %>
