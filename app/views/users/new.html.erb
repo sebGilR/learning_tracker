@@ -1,12 +1,15 @@
-<h2>Register</h2>
 <%= form_with model: @user do |f| %>
-  <p>
+  <header>
+    <h1 class="title">Register</h1>
+    <%= f.submit "Create user", disable_with: 'Submiting...' %>
+  </header>
+  <div>
     <%= f.label :name, "Name:" %><br>
     <%= f.text_field :name %>
   </p>
-  <p>
+  <div>
     <%= f.label :username, "Username:" %><br>
     <%= f.text_field :username %>
-  </p>
-  <%= f.submit "Create user", disable_with: 'Submiting...' %>
+  </div>
+  
 <% end %>
