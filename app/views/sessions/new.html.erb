@@ -10,16 +10,16 @@
   </ul>
   <p>
     <%= f.label :name, "Name" %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, required: true %>
   </p>
   <p>
     <%= f.label :amount, "Number of pomodoros" %><br>
-    <%= number_field :amount, in: 1..20, step: 1 %>
+    <%= f.number_field :amount, required: true, in: 1..10, step: 1 %>
   </p>
   <p>
-    <%= f.label :group %>
-    <%= f.text_field :group %>
+    <%= f.label :group %><br>
+    <%= select_tag(:group, options_for_select(@group_options)) %>
   </p>
-  <%= f.submit "Submit", disable_with: 'Submiting...' %>
+  <%= f.submit "Save", disable_with: 'Saving...' %>
 <% end %>
 

@@ -6,7 +6,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    @group = Group.find_by(name: params[:name])
+    @group = Group.includes(sessions: [:author]).find_by(name: params[:name])
   end
 
   def new
