@@ -4,7 +4,7 @@ class User < ApplicationRecord
   validates :name, presence: true, length: { in: 2..25 }, format: { with: /\A[a-zA-Z]+\z/,
   message: "only allows letters" }
   validates :username, presence: true, format: { with: /\A[a-zA-Z]+\z/,
-  message: "only allows letters" }, length: { in: 2..10}
+  message: "only allows letters" }, length: { in: 2..10}, uniqueness: true
 
   def to_param
     username
