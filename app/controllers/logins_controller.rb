@@ -1,19 +1,22 @@
 class LoginsController < ApplicationController
+    before_action :already_logged, except: [:destroy]
+    
     def new; end
 
     def create
         user = User.find_by(username: params[:username])
 
         if user.nil?
-            redirect_to login_url, notice: 'Username is not valid'
+            flash.now[:notice] = 'Username is not valid'
+            render :new
         else
             session[:username] = user.username
-            redirect_to root_url, notice: "Logged in!"
+            redirect_to user_url(user), notice: "Logged in!"
         end
     end
 
     def destroy
         session[:username] = nil
-        redirect_to login_url, notice: "Logged out!"
+        redirect_to root_url, notice: "Logged out!"
     end
 end

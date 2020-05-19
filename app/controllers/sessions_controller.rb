@@ -9,18 +9,16 @@ class SessionsController < ApplicationController
     @session = current_user.sessions.build(session_params)
     
     if @session.save
-      if params[:group] != nil
-        group = Group.find_by(name: params[:group])
-        group.sessions << @session
-      end
-      redirect_to session_url(@session), notice: "Session saved"
+        redirect_to sessions_path, notice: "Session saved"
     else
       render :new
     end
   end
 
   def index
-    if params[:type] == "mysessions"
+    if params[:type] == nil
+      redirect_to user_url(current_user)
+    elsif params[:type] == "mysessions"
       @sessions = current_user.my_sessions
       @total = current_user.my_sessions_total
       @title = "My Study Sessions"
@@ -32,6 +30,6 @@ class SessionsController < ApplicationController
   end
 
   def session_params
-    params.require(:session).permit(:name, :amount)
+    params.require(:session).permit(:name, :amount, :group)
   end
 end

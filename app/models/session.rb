@@ -6,4 +6,11 @@ class Session < ApplicationRecord
   def group
     groups.first
   end
+
+  def group=(group)
+    g = Group.find_by(name: group)
+    if g
+      self.groups << g
+    end
+  end
 end

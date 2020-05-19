@@ -1,0 +1,12 @@
+<h2>Register</h2>
+<%= form_with model: @user do |f| %>
+  <p>
+    <%= f.label :name, "Name:" %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :username, "Username:" %><br>
+    <%= f.text_field :username %>
+  </p>
+  <%= f.submit "Create user", disable_with: 'Submiting...' %>
+<% end %>

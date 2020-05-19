@@ -1,10 +1,23 @@
 <h2>Register study session</h2>
+
 <%= form_with model: @session do |f| %>
-  <%= f.label :name, "name" %><br>
-  <%= f.text_field :name %><br><br>
-  <%= f.label :amount, "amount" %><br>
-  <%= number_field :amount, in: 1..20, step: 1 %><br><br>
-  <%= f.label :group, "group" %><br>
-  <%= f.text_field :group %><br><br>
+  <ul>
+    <% @session.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+  <p>
+    <%= f.label :name, "Name" %><br>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :amount, "Number of pomodoros" %><br>
+    <%= number_field :amount, in: 1..20, step: 1 %>
+  </p>
+  <p>
+    <%= f.label :group %>
+    <%= f.text_field :group %>
+  </p>
   <%= f.submit "Submit", disable_with: 'Submiting...' %>
 <% end %>
+

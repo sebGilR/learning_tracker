@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#show'
+  root 'pages#index'
 
   resources :users, param: "username", only: [:show, :new, :create]
 
