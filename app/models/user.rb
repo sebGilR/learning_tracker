@@ -19,7 +19,7 @@ class User < ApplicationRecord
   end
 
   def ext_sessions
-    sessions.select { |s| !s.groups.any? }
+    sessions.includes(:groups).select { |s| !s.groups.any? }
   end
 
   def ext_sessions_total

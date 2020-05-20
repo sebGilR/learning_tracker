@@ -8,17 +8,19 @@
   <div class="sessions__total">
     Total pomodoro count: <span><%= @total %></span>
   </div>
-  <div class="sessions__session">
+  <div class="sessions__list">
     <% @sessions.each do |s| %>
-    <div>
+    <div class="sessions__list__item">
       <%= g_icon(s) %>
-      <div>
+      <div class ="item__info">
         <p><%= s.name %></p>
-        <strong><%= s.amount %></strong>
+        <strong class="amount"><%= s.amount %></strong>
+        <span class="date"><%= s.created_at.strftime('%d %b %Y') %></span>
       </div>
-      <span><%= s.created_at.strftime('%d %b %Y') %></span>
     </div>
   <% end %>
   </div>
-  <%= link_to "Add new", new_session_path %>
+  <div class="new">
+    <%= link_to "Add new", new_session_path, class: "new__session" %>
+  </div>
 </main>
