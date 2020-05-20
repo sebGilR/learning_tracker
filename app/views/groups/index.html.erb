@@ -1,5 +1,8 @@
 <section class="side_panel" id="groups">
   <h2 class="title">Groups</h2>
+  <%= link_to user_url(current_user) do %>
+    <i class="fas fa-arrow-left nav__icon"></i>
+  <% end %>
   <% @groups.each do |g| %>
     <%= link_to group_path(g), class: "link" do %>
       <div class="group">
@@ -11,5 +14,5 @@
       </div>
     <% end %>
   <% end %>
-<%= link_to "Create new", new_group_path %>
+  <%= link_to "Create new", new_group_path, class: "new_group" %>
 </section>

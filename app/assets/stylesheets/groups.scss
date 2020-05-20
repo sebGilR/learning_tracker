@@ -1,17 +1,34 @@
 #groups {
+  .nav__icon{
+    top: 3.5em;
+    left: 2em;
+  }
+
   h2 {
     text-align: center;
   }
 
-  img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-top: 1em;
+  .new_group {
+    display: inline-block;
+    text-align: center;
+    background-color: #5fb523;
+    padding: 0.5em;
+    border-radius: 5px;
+  }
+
+  a:not(:nth-last-child(2)) .group__info {
+    border-bottom: 1px solid lightgray;
   }
 
   .group {
     display: flex;
+
+    &__thumbnail {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-top: 1em;
+    }
 
     &__info {
       display: flex;
@@ -20,7 +37,7 @@
       padding: 1em 0 1em 0;
       margin-left: 1em;
       width: 100%;
-      border-bottom: 1px solid lightgray;
+      
 
       span {
         font-size: 0.8em;

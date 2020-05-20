@@ -11,7 +11,7 @@ class User < ApplicationRecord
   end
 
   def my_sessions
-    sessions.select { |s| s.groups.any?}
+    sessions.includes(:groups).select { |s| s.groups.any?}
   end
 
   def my_sessions_total

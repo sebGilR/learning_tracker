@@ -1,9 +1,15 @@
-<main>
+<main class="sessions">
   <header>
     <h2 class="title"><%= @title %></h2>
+    <%= link_to user_url(current_user) do %>
+      <i class="fas fa-arrow-left nav__icon"></i>
+    <% end %>
   </header>
-  <span>Total: <%= @total %></span>
-  <% @sessions.each do |s| %>
+  <div class="sessions__total">
+    Total pomodoro count: <span><%= @total %></span>
+  </div>
+  <div class="sessions__session">
+    <% @sessions.each do |s| %>
     <div>
       <%= g_icon(s) %>
       <div>
@@ -13,5 +19,6 @@
       <span><%= s.created_at.strftime('%d %b %Y') %></span>
     </div>
   <% end %>
+  </div>
   <%= link_to "Add new", new_session_path %>
 </main>
