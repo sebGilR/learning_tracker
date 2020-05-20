@@ -1,26 +1,24 @@
 class ApplicationController < ActionController::Base
-    helper_method :current_user
+  helper_method :current_user
 
-    def current_user
-      if session[:username]
-        return @current_user ||= User.find_by(username: session[:username])
-      else
-        return @current_user = nil
-      end
+  def current_user
+    if session[:username]
+      @current_user ||= User.find_by(username: session[:username])
+    else
+      @current_user = nil
     end
+  end
 
-    private
- 
-    def require_login
-      unless current_user
-        flash[:error] = "You must be logged in to access this section"
-        redirect_to root_url
-      end
-    end
+  private
 
-    def already_logged
-      if current_user
-        redirect_to user_url(current_user)
-      end
-    end
+  def require_login
+    return if current_user
+
+    flash[:error] = 'You must be logged in to access this section'
+    redirect_to root_url
+  end
+
+  def already_logged
+    redirect_to user_url(current_user) if current_user
+  end
 end

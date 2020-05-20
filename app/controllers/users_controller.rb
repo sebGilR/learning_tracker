@@ -9,10 +9,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    
+
     if @user.save
       session[:username] = @user.username
-      redirect_to user_path(@user), notice: "Your account has been created"
+      redirect_to user_path(@user), notice: 'Your account has been created'
     else
       render :new
     end

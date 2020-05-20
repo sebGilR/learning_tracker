@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :require_login
-  
+
   def index
     @groups = Group.all
   end
@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
 
     if @group.save
-      redirect_to group_path(@group), notice: "Group created"
+      redirect_to group_path(@group), notice: 'Group created'
     else
       render :new
     end

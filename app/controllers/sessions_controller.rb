@@ -3,30 +3,30 @@ class SessionsController < ApplicationController
 
   def new
     @group_options = Group.all.map { |g| [g.name, g.name] }
-    @group_options.unshift(["Select a group", nil])
+    @group_options.unshift(['Select a group', nil])
     @session = current_user.sessions.build
   end
 
   def create
     @session = current_user.sessions.build(session_params)
     @session.group = params[:group]
-    
+
     if @session.save
-        redirect_to sessions_path, notice: "Session saved"
+      redirect_to sessions_path, notice: 'Session saved'
     else
       render :new
     end
   end
 
   def index
-    if params[:type] == "mysessions"
+    if params[:type] == 'mysessions'
       @sessions = current_user.my_sessions
       @total = current_user.my_sessions_total
-      @title = "My Study Sessions"
-    elsif params[:type] == "external"
+      @title = 'My Study Sessions'
+    elsif params[:type] == 'external'
       @sessions = current_user.ext_sessions
       @total = current_user.ext_sessions_total
-      @title = "External Study Sessions"
+      @title = 'External Study Sessions'
     else
       redirect_to user_url(current_user)
     end
