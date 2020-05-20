@@ -1,15 +1,15 @@
-<header>
+<section class="side_panel" id="groups">
   <h2 class="title">Groups</h2>
-</header>
-<% @groups.each do |g| %>
-  <%= link_to group_path(g) do %>
-    <div>
-      <%= image_tag(g.icon, class: "group__thumbnail") %>
-      <div>
-        <p><%= g.name %></p>
+  <% @groups.each do |g| %>
+    <%= link_to group_path(g), class: "link" do %>
+      <div class="group">
+        <%= image_tag(g.icon, class: "group__thumbnail") %>
+        <div class="group__info">
+          <h3><%= g.name %></h3>
+          <span><%= g.created_at.strftime('%d %b %Y') %></span>
+        </div>
       </div>
-      <span><%= g.created_at.strftime('%d %b %Y') %></span>
-    </div>
+    <% end %>
   <% end %>
-<% end %>
 <%= link_to "Create new", new_group_path %>
+</section>

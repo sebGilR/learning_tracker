@@ -1,10 +1,14 @@
-<%= form_tag logins_path do |form| %>
-  <header>
-    <h1>Login</h1>
-    <%= submit_tag "Login" %>
-  </header>
-  <div>
-    <%= label_tag :username, "Username" %><br>
-    <%= text_field_tag :username %>
-  </div>
-<% end %>
+<main class="login">
+  <%= form_tag logins_path do |form| %>
+    <header>
+      <h1>Login</h1>
+      <%= link_to root_url do %>
+        <i class="fas fa-arrow-left nav__icon"></i>
+      <% end %>
+      <%= submit_tag "Log in" %>
+    </header>
+    <div class="form__fields">
+      <%= text_field_tag :username, nil, placeholder: 'Username' %>
+    </div>
+  <% end %>
+</main>

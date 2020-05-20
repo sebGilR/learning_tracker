@@ -1,3 +1,31 @@
-// Place all the styles related to the groups controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+#groups {
+  h2 {
+    text-align: center;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 1em;
+  }
+
+  .group {
+    display: flex;
+
+    &__info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1em 0 1em 0;
+      margin-left: 1em;
+      width: 100%;
+      border-bottom: 1px solid lightgray;
+
+      span {
+        font-size: 0.8em;
+        margin-top: 5px;
+      }
+    }
+  }
+}
