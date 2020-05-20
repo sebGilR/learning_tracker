@@ -1,3 +1,8 @@
+body, html {
+  max-height: 100vh;
+  overflow-x: hidden;
+}
+
 .side_panel {
   background: rgb(55,120,194);
   background: linear-gradient(11deg, rgba(55,120,194,1) 0%, rgba(27,48,149,1) 100%);
@@ -31,5 +36,30 @@
     color: white;
     padding: 1em 0;
     width: calc(100% - 2.5em);
+  }
+}
+
+
+.side_view {
+  width: 100%;
+  position: absolute;
+  right: -73%;
+  top: 3em;
+  bottom: 3em;
+  z-index: 0;
+
+  iframe {
+    position: relative;
+    height: 100%;
+    border: 0;
+  }
+
+  a {
+    display: block;
+    position: absolute;
+    height: 100%;
+    z-index: 100;
+    top: 0;
+    width: 100%;
   }
 }

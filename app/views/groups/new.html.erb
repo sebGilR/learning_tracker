@@ -1,10 +1,15 @@
-<header>
-  <h2 class="title">Create group</h2>
-</header>
 <%= form_with model: @group do |f| %>
-  <%= f.label :name, "Name" %><br>
-  <%= f.text_field :name %><br><br>
-  <%= f.label :icon, "Icon URL" %><br>
-  <%= f.text_field :icon, placeholder: " " %><br><br>
-  <%= f.submit "Create", disable_with: 'Creating...' %>
+  <header>
+    <h2 class="title">Create group</h2>
+    <%= link_to groups_path do %>
+        <i class="fas fa-arrow-left nav__icon"></i>
+      <% end %>
+    <%= f.submit "Create", disable_with: 'Creating...' %>
+  </header>
+
+  <div class="form__fields">
+    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.text_field :icon, value: nil, placeholder: "Icon URL" %>
+  </div>
+  
 <% end %>

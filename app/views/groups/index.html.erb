@@ -6,7 +6,7 @@
   <% @groups.each do |g| %>
     <%= link_to group_path(g), class: "link" do %>
       <div class="group">
-        <%= image_tag(g.icon, class: "group__thumbnail") %>
+        <%= image_tag(g.icon, class: "group__thumbnail", alt: "Group") %>
         <div class="group__info">
           <h3><%= g.name %></h3>
           <span><%= g.created_at.strftime('%d %b %Y') %></span>
@@ -16,3 +16,11 @@
   <% end %>
   <%= link_to "Create new", new_group_path, class: "new_group" %>
 </section>
+
+<div class="side_view">
+  <iframe title="My Sessions" src="/sessions?type=mysessions" >
+    <p>Placeholder text; only shows up if the page DOESN'T render!</p>
+  </iframe>
+  <%= link_to sessions_path(type: "mysessions") do %>
+  <% end %>
+</div>

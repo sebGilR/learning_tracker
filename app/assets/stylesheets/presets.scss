@@ -1,35 +1,26 @@
-@font-face {
-    font-family: 'Proxima Nova';
-    font-style: normal;
-    font-weight: bold;
-    src: url(../fonts/proximanova-bold.otf)
-}
-
-@font-face {
-  font-family: 'Proxima Nova';
-  font-style: normal;
-  font-weight: lighter;
-  src: url(../fonts/proximanova-light.otf)
-}
-
-@font-face {
-  font-family: 'Billabong';
-  font-style: normal;
-  font-weight: normal;
-  src: url(../fonts/Billabong.ttf)
-}
-
 $primary: #3778c2;
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #434C55;
+}
 
 header {
   background-color: $primary;
   padding: 0.5em;
   margin-bottom: 0.5em;
+  color: white;
+
+  a, input {
+    color: white;
+  }
 
   h1, h2 {
     text-align: center;
     text-transform: uppercase;
     font-size: 1.3em;
+    font-weight: 300;
   }
 }
 

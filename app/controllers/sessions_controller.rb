@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def new
     @group_options = Group.all.map { |g| [g.name, g.name] }
-    @group_options.unshift([nil, nil])
+    @group_options.unshift(["Select a group", nil])
     @session = current_user.sessions.build
   end
 

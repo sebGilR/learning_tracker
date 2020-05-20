@@ -1,6 +1,6 @@
 <section class="side_panel">
   <div class="profile">
-    <%= image_tag("https://via.placeholder.com/100x100", class: "profile__thumbnail") %>
+    <%= image_tag("https://via.placeholder.com/100x100", class: "profile__thumbnail", alt: "Profile") %>
     <h1><%= current_user.name %></h1>
   </div>
   <ul>
@@ -9,4 +9,13 @@
       <li><i class="fas fa-object-group"></i><%= link_to "All groups", groups_path %></li>
       <li><i class="fas fa-sign-out-alt"></i><%= link_to "Log out", logout_path %></li>
   </ul>
+
 </section>
+
+<div class="side_view">
+  <iframe  title="My Sessions" src="/sessions?type=mysessions" >
+    <p>Placeholder text; only shows up if the page DOESN'T render!</p>
+  </iframe>
+  <%= link_to sessions_path(type: "mysessions") do %>
+  <% end %>
+</div>

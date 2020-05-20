@@ -46,6 +46,8 @@
         justify-content: space-between;
         position: relative;
         padding-top: 0.2em;
+        color: #878A8F;
+        font-weight: 400;
 
         .amount {
           position: absolute;
@@ -56,6 +58,13 @@
         .date {
           display: block;
           border-top: 1px solid lightgray;
+          color: #989DA3;
+          font-weight: 300;
+          font-size: 80%;
+        }
+
+        strong {
+          color: #434C55;
         }
       }
 
@@ -78,6 +87,7 @@
       border: 1px solid lightgray;
       border-radius: 4px;
       padding: 1em;
+      color: white;
     }
   }
 }

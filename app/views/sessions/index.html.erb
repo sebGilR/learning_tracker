@@ -2,7 +2,7 @@
   <header>
     <h2 class="title"><%= @title %></h2>
     <%= link_to user_url(current_user) do %>
-      <i class="fas fa-arrow-left nav__icon"></i>
+      <i class="fas fa-bars nav__icon"></i>
     <% end %>
   </header>
   <div class="sessions__total">
@@ -21,6 +21,6 @@
   <% end %>
   </div>
   <div class="new">
-    <%= link_to "Add new", new_session_path, class: "new__session" %>
+    <%= link_to "ADD NEW", new_session_path, class: "new__session" %>
   </div>
 </main>
