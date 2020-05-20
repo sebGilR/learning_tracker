@@ -1,11 +1,12 @@
-body, html {
+body,
+html {
   max-height: 100vh;
   overflow-x: hidden;
 }
 
 .side_panel {
-  background: rgb(55,120,194);
-  background: linear-gradient(11deg, rgba(55,120,194,1) 0%, rgba(27,48,149,1) 100%);
+  background: rgb(55, 120, 194);
+  background: linear-gradient(11deg, rgba(55, 120, 194, 1) 0%, rgba(27, 48, 149, 1) 100%);
   position: absolute;
   top: 0;
   right: 0;
@@ -38,7 +39,6 @@ body, html {
     width: calc(100% - 2.5em);
   }
 }
-
 
 .side_view {
   width: 100%;

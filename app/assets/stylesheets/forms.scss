@@ -1,19 +1,12 @@
 header {
   input[type="submit"] {
     background-color: transparent;
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     border: 0;
     position: absolute;
     right: 1em;
     top: 1em;
   }
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset;
 }
 
 .form__fields {
@@ -42,8 +35,8 @@ input:-webkit-autofill:active {
     background-color: transparent;
   }
 
-  select { 
-    position: relative;   
+  select {
+    position: relative;
     display: block;
     line-height: 1.2em;
     padding-top: 0.7em;
@@ -51,5 +44,11 @@ input:-webkit-autofill:active {
     outline: none;
     width: 80%;
   }
-  
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset;
 }

@@ -4,7 +4,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #F1F3F2;
+  background-color: #f1f3f2;
 
   header {
     color: white;
@@ -22,7 +22,7 @@
     border-bottom: 1px solid lightgray;
     box-shadow: 0 1px 5px rgba(141, 141, 141, 0.178);
     background-color: white;
-  
+
     span {
       font-weight: bold;
     }
@@ -46,7 +46,7 @@
         justify-content: space-between;
         position: relative;
         padding-top: 0.2em;
-        color: #878A8F;
+        color: #878a8f;
         font-weight: 400;
 
         .amount {
@@ -58,13 +58,13 @@
         .date {
           display: block;
           border-top: 1px solid lightgray;
-          color: #989DA3;
+          color: #989da3;
           font-weight: 300;
           font-size: 80%;
         }
 
         strong {
-          color: #434C55;
+          color: #434c55;
         }
       }
 
@@ -79,7 +79,7 @@
     bottom: 0;
     text-align: center;
     padding: 1em;
-    background-color: #60B524 ;
+    background-color: #60b524;
     width: 100%;
 
     &__session {

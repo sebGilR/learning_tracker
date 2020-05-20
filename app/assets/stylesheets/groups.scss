@@ -1,5 +1,5 @@
 #groups {
-  .nav__icon{
+  .nav__icon {
     top: 3.5em;
     left: 2em;
   }
@@ -14,10 +14,6 @@
     background-color: #5fb523;
     padding: 0.5em;
     border-radius: 5px;
-  }
-
-  a:not(:nth-last-child(2)) .group__info {
-    border-bottom: 1px solid lightgray;
   }
 
   .group {
@@ -42,6 +38,10 @@
         font-size: 0.8em;
         margin-top: 5px;
       }
+    }
+
+    a:not(:nth-last-child(2)) .group__info {
+      border-bottom: 1px solid lightgray;
     }
   }
 }
