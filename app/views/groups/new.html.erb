@@ -6,7 +6,11 @@
       <% end %>
     <%= f.submit "Create", disable_with: 'Creating...' %>
   </header>
-
+  <ul class="error_list">
+    <% @group.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
   <div class="form__fields">
     <%= f.text_field :name, placeholder: "Name" %>
   </div>

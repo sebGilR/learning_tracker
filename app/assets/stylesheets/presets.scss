@@ -31,3 +31,24 @@ header {
   left: 0.8em;
   top: 0.75em;
 }
+
+.error_list li {
+  display: block;
+  padding: 0.5em;
+  text-shadow: 0 0 1px lightcoral;
+
+  &::before {
+    content: '- ';
+    color: lightcoral;
+    text-shadow: 0 0 4px lightcoral;
+  }
+}
+
+.field_with_errors {
+  border-bottom: 1px solid lightcoral;
+  box-shadow: 0 0 3px lightcoral;
+
+  input {
+    padding-left: 0.5em;
+  }
+}

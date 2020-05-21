@@ -6,7 +6,7 @@
     <% end %>
     <%= f.submit "Save", disable_with: 'Saving...' %>
   </header>
-  <ul>
+  <ul class="error_list">
     <% @session.errors.full_messages.each do |error| %>
       <li><%= error %></li>
     <% end %>
