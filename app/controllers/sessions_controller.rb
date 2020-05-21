@@ -2,8 +2,7 @@ class SessionsController < ApplicationController
   before_action :require_login
 
   def new
-    @group_options = Group.all.map { |g| [g.name, g.name] }
-    @group_options.unshift(['Select a group', nil])
+    groups_list
     @session = current_user.sessions.build
   end
 
@@ -14,6 +13,7 @@ class SessionsController < ApplicationController
     if @session.save
       redirect_to sessions_path, notice: 'Session saved'
     else
+      groups_clean
       render :new
     end
   end
@@ -34,6 +34,16 @@ class SessionsController < ApplicationController
     else
       redirect_to user_url(current_user)
     end
+  end
+
+  private
+  def groups_list
+    @group_options = Group.all.map { |g| [g.name, g.name] }
+    @group_options.unshift(['Select a group', nil])
+  end
+
+  def groups_clean
+    @group_options = Group.all.map { |g| [g.name, g.name] }
   end
 
   def session_params
