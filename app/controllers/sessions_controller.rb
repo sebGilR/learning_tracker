@@ -27,6 +27,10 @@ class SessionsController < ApplicationController
       @sessions = current_user.ext_sessions
       @total = current_user.ext_sessions_total
       @title = 'External Study Sessions'
+    elsif params[:type] == 'recent'
+      @sessions = current_user.recent
+      @total = current_user.recent_total
+      @title = 'Last 5 Sessions'
     else
       redirect_to user_url(current_user)
     end

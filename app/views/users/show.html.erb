@@ -4,10 +4,11 @@
     <h1><%= current_user.name %></h1>
   </div>
   <ul>
-      <li><i class="fas fa-folder-open"></i><%= link_to "All my sessions", sessions_path(type: "mysessions") %></li>
-      <li><i class="fas fa-list-ul"></i><%= link_to "All my external sessions", sessions_path(type: "external") %></li>
-      <li><i class="fas fa-object-group"></i><%= link_to "All groups", groups_path %></li>
-      <li><i class="fas fa-sign-out-alt"></i><%= link_to "Log out", logout_path %></li>
+    <li><i class="fas fa-history"></i><%= link_to "Recent sessions", sessions_path(type: "recent") %></li>
+    <li><i class="fas fa-folder-open"></i><%= link_to "All my sessions", sessions_path(type: "mysessions") %></li>
+    <li><i class="fas fa-list-ul"></i><%= link_to "All my external sessions", sessions_path(type: "external") %></li>
+    <li><i class="fas fa-object-group"></i><%= link_to "All groups", groups_path %></li>
+    <li><i class="fas fa-sign-out-alt"></i><%= link_to "Log out", logout_path %></li>
   </ul>
 
 </section>

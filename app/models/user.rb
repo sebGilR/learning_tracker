@@ -11,6 +11,14 @@ class User < ApplicationRecord
     username
   end
 
+  def recent
+    sessions.limit(5)
+  end
+
+  def recent_total
+    sessions.limit(5).sum(:amount)
+  end
+
   def my_sessions
     sessions.includes(:groups).select { |s| s.groups.any? }
   end
