@@ -4,13 +4,13 @@
 
 ## Built With
 
-Ruby: 2.7.0
-Rails: 6.0.2
+- Ruby: 2.7.0
+- Rails: 6.0.2
 
 ## Live Demo
 
-Go to https://learning-tracker-ror.herokuapp.com/ to see the live version.
-Log in with the user "testuser" to test the app.
+- Go to https://learning-tracker-ror.herokuapp.com/ to see the live version.
+- Log in with the user "testuser" to test the app.
 
 ## Screenshot
 
@@ -23,9 +23,9 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+- Ruby: 2.6.3
+- Rails: 5.2.3
+- Postgres: >=9.5
 
 ### Setup
 
