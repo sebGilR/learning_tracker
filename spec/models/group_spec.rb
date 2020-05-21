@@ -13,5 +13,10 @@ RSpec.describe Group, type: :model do
       group = Group.new(name: 'Group').save
       expect(group).to eq(false)
     end
+
+    it 'ensures name is only allows letters and spaces' do
+      group = Group.new(name: 'Group44').save
+      expect(group).to eq(false)
+    end
   end
 end

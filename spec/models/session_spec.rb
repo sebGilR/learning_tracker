@@ -13,8 +13,13 @@ RSpec.describe User, type: :model do
       expect(session).to eq(false)
     end
 
-    it 'ensures name is maximum 10 characters' do
-      session = test_user.sessions.build(name: 'thisisaninvalidname', amount: 3).save
+    it 'ensures name is maximum 30 characters' do
+      session = test_user.sessions.build(name: 'thisisaninvalidnamethisisaninvalidname', amount: 3).save
+      expect(session).to eq(false)
+    end
+
+    it 'ensures name only has letters and spaces' do
+      session = test_user.sessions.build(name: 'Notvalid 444', amount: 3).save
       expect(session).to eq(false)
     end
 
