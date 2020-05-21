@@ -52,6 +52,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   .title {
     padding: 0 1em;
   }
@@ -61,15 +62,16 @@
     border-radius: 50%;
   }
 
-  .item{
+  .item {
     width: 100%;
+
     div {
       padding: 0.5em 0;
       display: flex;
       justify-content: space-between;
     }
 
-    &__details{
+    &__details {
       border-top: 1px solid lightgray;
       font-size: 80%;
     }

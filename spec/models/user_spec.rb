@@ -1,45 +1,45 @@
-require "rails_helper"
+require 'rails_helper'
 
-RSpec.describe User, :type => :model do
-  let!(:test_user) { User.create(name: "Tom", username: "tom") }
-  let!(:session1) { test_user.sessions.create(name: "Session", amount: 5) }
-  let!(:session2) { test_user.sessions.create(name: "Session", amount: 3) }
-  let!(:session3) { test_user.sessions.create(name: "Session", amount: 3) }
-  let!(:group) { Group.create(name: "Group")}
+RSpec.describe User, type: :model do
+  let!(:test_user) { User.create(name: 'Tom', username: 'tom') }
+  let!(:session1) { test_user.sessions.create(name: 'Session', amount: 5) }
+  let!(:session2) { test_user.sessions.create(name: 'Session', amount: 3) }
+  let!(:session3) { test_user.sessions.create(name: 'Session', amount: 3) }
+  let!(:group) { Group.create(name: 'Group') }
 
-  context "validation" do
-    it "ensures name is present" do
-      user = User.new(username: "User").save
+  context 'validation' do
+    it 'ensures name is present' do
+      user = User.new(username: 'User').save
       expect(user).to eq(false)
     end
 
-    it "ensures username is present" do
-      user = User.new(name: "User").save
+    it 'ensures username is present' do
+      user = User.new(name: 'User').save
       expect(user).to eq(false)
     end
 
-    it "ensures username has only letters" do
-      user = User.new(name: "User", username: "4user").save
+    it 'ensures username has only letters' do
+      user = User.new(name: 'User', username: '4user').save
       expect(user).to eq(false)
     end
 
-    it "ensures username is between 2 and 10 characters" do
-      user = User.new(name: "User", username: "u").save
+    it 'ensures username is between 2 and 10 characters' do
+      user = User.new(name: 'User', username: 'u').save
       expect(user).to eq(false)
     end
 
-    it "ensures username is unique" do
-      user1 = User.new(name: "User", username: "user").save
-      user2 = User.new(name: "User", username: "user").save
+    it 'ensures username is unique' do
+      user2 = User.new(name: 'User', username: 'tom').save
+
       expect(user2).to eq(false)
     end
   end
-  
-  describe "#recent" do
-    let!(:session4) { test_user.sessions.create(name: "Session", amount: 3) }
-    let!(:session5) { test_user.sessions.create(name: "Session", amount: 3) }
-    let!(:session6) { test_user.sessions.create(name: "Session", amount: 3) }
-    let!(:session7) { test_user.sessions.create(name: "Session", amount: 3) }
+
+  describe '#recent' do
+    let!(:session4) { test_user.sessions.create(name: 'Session', amount: 3) }
+    let!(:session5) { test_user.sessions.create(name: 'Session', amount: 3) }
+    let!(:session6) { test_user.sessions.create(name: 'Session', amount: 3) }
+    let!(:session7) { test_user.sessions.create(name: 'Session', amount: 3) }
     it 'returns a collection of the last 5 sessions' do
       group.sessions << session1
       group.sessions << session2
@@ -52,7 +52,7 @@ RSpec.describe User, :type => :model do
     end
   end
 
-  describe "#my_sessions" do
+  describe '#my_sessions' do
     it 'returns a collection of grouped sessions' do
       group.sessions << session1
       group.sessions << session2
@@ -60,7 +60,7 @@ RSpec.describe User, :type => :model do
     end
   end
 
-  describe "#my_sessions_total" do
+  describe '#my_sessions_total' do
     it 'returns the sum of amount attributes of all grouped sessions' do
       group.sessions << session1
       group.sessions << session2
@@ -68,7 +68,7 @@ RSpec.describe User, :type => :model do
     end
   end
 
-  describe "#ext_sessions" do
+  describe '#ext_sessions' do
     it 'returns a collection of grouped sessions' do
       group.sessions << session1
       group.sessions << session2
@@ -76,7 +76,7 @@ RSpec.describe User, :type => :model do
     end
   end
 
-  describe "#ext_sessions_total" do
+  describe '#ext_sessions_total' do
     it 'returns the sum of amount attributes of all grouped sessions' do
       group.sessions << session1
       group.sessions << session2
