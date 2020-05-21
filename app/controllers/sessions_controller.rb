@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     @session.group = params[:group]
 
     if @session.save
-      redirect_to sessions_path, notice: 'Session saved'
+      redirect_to sessions_path
     else
       groups_clean
       render :new

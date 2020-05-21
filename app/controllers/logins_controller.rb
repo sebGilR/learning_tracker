@@ -7,16 +7,16 @@ class LoginsController < ApplicationController
     user = User.find_by(username: params[:username])
 
     if user.nil?
-      flash.now[:notice] = 'Username is not valid'
+      flash.now[:alert] = 'Username is not valid'
       render :new
     else
       session[:username] = user.username
-      redirect_to user_url(user), notice: 'Logged in!'
+      redirect_to user_url(user)
     end
   end
 
   def destroy
     session[:username] = nil
-    redirect_to root_url, notice: 'Logged out!'
+    redirect_to root_url
   end
 end

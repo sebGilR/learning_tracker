@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
     if @user.save
       session[:username] = @user.username
-      redirect_to user_path(@user), notice: 'Your account has been created'
+      redirect_to user_path(@user)
     else
       render :new
     end

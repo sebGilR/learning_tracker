@@ -7,6 +7,9 @@
       <% end %>
       <%= submit_tag "Log in" %>
     </header>
+    <% if flash.now[:alert] %>
+      <div class="alert"><%= flash.now[:alert] %></div>
+    <% end %>
     <div class="form__fields">
       <%= text_field_tag :username, nil, placeholder: 'Username' %>
     </div>
