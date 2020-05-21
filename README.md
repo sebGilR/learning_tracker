@@ -9,7 +9,8 @@ Rails: 6.0.2
 
 ## Live Demo
 
-Go to https://social-media-ror.herokuapp.com/ to see the live version.
+Go to https://learning-tracker-ror.herokuapp.com/ to see the live version.
+Log in with the user "testuser" to test the app.
 
 ## Screenshot
 
