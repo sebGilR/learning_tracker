@@ -80,3 +80,7 @@ Feel free to check the [issues page](issues/).
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgements
+
+Design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
