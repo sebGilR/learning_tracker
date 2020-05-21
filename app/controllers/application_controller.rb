@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   def require_login
     return if current_user
-    
+
     redirect_to root_url
   end
 
