@@ -240,7 +240,6 @@ DEPENDENCIES
   better_errors (~> 2.7, >= 2.7.1)
   binding_of_caller
   bootsnap (>= 1.4.2)
-  bullet
   byebug
   capybara
   database_cleaner
