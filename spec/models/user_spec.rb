@@ -34,6 +34,23 @@ RSpec.describe User, :type => :model do
       expect(user2).to eq(false)
     end
   end
+  
+  describe "#recent" do
+    let!(:session4) { test_user.sessions.create(name: "Session", amount: 3) }
+    let!(:session5) { test_user.sessions.create(name: "Session", amount: 3) }
+    let!(:session6) { test_user.sessions.create(name: "Session", amount: 3) }
+    let!(:session7) { test_user.sessions.create(name: "Session", amount: 3) }
+    it 'returns a collection of the last 5 sessions' do
+      group.sessions << session1
+      group.sessions << session2
+      group.sessions << session3
+      group.sessions << session4
+      group.sessions << session5
+      group.sessions << session6
+      group.sessions << session7
+      expect(test_user.recent.length).to eq(5)
+    end
+  end
 
   describe "#my_sessions" do
     it 'returns a collection of grouped sessions' do
