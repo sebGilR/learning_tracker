@@ -1,16 +1,28 @@
-<header>
-  <h2 class="title"><%= @group.name %></h2>
-  <%= image_tag(@group.icon, class: "group__thumbnail") %>
-</header>
-
-<h3>Group transactions</h3>
-
-<% @group.sessions.each do |s| %>
-  <div>
-    <h4><%= s.author.name %></h4>
-    <p><%= s.name %></p>
-    <strong><%= s.amount %></strong>
-    <span><%= s.created_at.strftime('%d %b %Y') %></span>
+<main class="sessions">
+  <header>
+    <h2 class="title"><%= @group.name %></h2>
+    <%= image_tag(@group.icon, class: "group__thumbnail", alt: "Group icon") %>
+    <%= link_to groups_path do %>
+      <i class="fas fa-arrow-left nav__icon"></i>
+    <% end %>
+  </header>
+  <div class="sessions__list">
+    <% @group.sessions.each do |s| %>
+      <div class="sessions__list__item">
+        <div class="item">
+          <div>
+            <h4><%= s.name %></h4>
+            <strong><%= s.amount %></strong>
+          </div>
+          <div class="item__details">
+            <p><%= s.author.name %></p>
+            <span><%= s.created_at.strftime('%d %b %Y') %></span>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-<% end %>
-<%= link_to "Add new", new_session_path %>
+  <div class="new">
+     <%= link_to "Add new", new_session_path, class: "new__session" %>
+  </div>
+</main>
