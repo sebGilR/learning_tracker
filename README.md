@@ -14,7 +14,7 @@
 
 ## Video Demo
 
-- View video here
+- [View video here](https://www.loom.com/share/bc206bc7edac479fb3087e98965aba1e)
 
 ## Screenshot
 
