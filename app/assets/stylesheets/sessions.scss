@@ -34,6 +34,10 @@
 
   &__list {
     padding: 0.7em 0.7em 5.8em 0.7em;
+    overflow-y: scroll;
+    position: relative;
+    bottom: 0;
+    height: calc(100% - 5.8em);
 
     &__item {
       background-color: white;
