@@ -5,7 +5,7 @@ RSpec.describe Session, type: :model do
   let!(:session1) { test_user.sessions.create(name: 'Session', amount: 5) }
   let!(:session2) { test_user.sessions.create(name: 'Session', amount: 3) }
   let!(:session3) { test_user.sessions.create(name: 'Session', amount: 3) }
-  let!(:group) { Group.create(name: 'Group', icon: "") }
+  let!(:group) { Group.create(name: 'Group', icon: '') }
 
   context 'validation' do
     it 'ensures name is present' do

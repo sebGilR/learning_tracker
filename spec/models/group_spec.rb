@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-  let!(:test_group) { Group.create(name: 'Group', icon: "") }
+  let!(:test_group) { Group.create(name: 'Group', icon: '') }
 
   context 'validation' do
     it 'ensures name is present' do
