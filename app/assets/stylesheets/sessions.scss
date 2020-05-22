@@ -13,6 +13,10 @@
     a {
       color: white;
     }
+
+    img {
+      object-fit: cover;
+    }
   }
 
   &__total {
@@ -74,6 +78,7 @@
 
       img {
         margin-right: 0.5em;
+        object-fit: cover;
       }
     }
   }
