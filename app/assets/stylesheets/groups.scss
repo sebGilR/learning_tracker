@@ -1,4 +1,13 @@
 #groups {
+  overflow: hidden;
+
+  .menu__list {
+    position: relative;
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
   .nav__icon {
     top: 3.5em;
     left: 2em;
@@ -9,11 +18,15 @@
   }
 
   .new_group {
-    display: inline-block;
+    display: block;
+    width: 60%;
     text-align: center;
     background-color: #5fb523;
     padding: 0.5em;
     border-radius: 5px;
+    position: absolute;
+    bottom: 1.5em;
+    left: 0;
   }
 
   .group {
@@ -30,7 +43,6 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 1em 0 1em 0;
       margin-left: 1em;
       width: 100%;
 

@@ -4,8 +4,10 @@ header {
     background-repeat: no-repeat;
     border: 0;
     position: absolute;
-    right: 1em;
-    top: 1em;
+    right: 0.5em;
+    top: 0.5em;
+    padding: 0.5em 0.5em 0.5em 2em;
+    outline: none;
   }
 }
 
@@ -38,7 +40,7 @@ header {
   select {
     position: relative;
     display: block;
-    line-height: 1.2em; 
+    line-height: 1.2em;
     padding: 0.7em;
     margin-left: -0.7em;
     outline: none;
@@ -46,8 +48,6 @@ header {
     box-sizing: border-box;
 
     option {
-      
-
       &:not(:first-child) {
         padding: 0.7em;
         background-color: rgb(223, 223, 223);
@@ -57,11 +57,11 @@ header {
       &:not(:last-child) {
         border-bottom: 1px solid lightgray;
       }
+
       &:first-child {
         padding-top: 0.7em;
         padding-bottom: 0.7em;
         border-bottom: 0;
-
       }
     }
   }
