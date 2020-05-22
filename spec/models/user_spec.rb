@@ -2,10 +2,10 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   let!(:test_user) { User.create(name: 'Tom', username: 'tom') }
-  let!(:session1) { test_user.sessions.create(name: 'Session', amount: 5) }
-  let!(:session2) { test_user.sessions.create(name: 'Session', amount: 3) }
+  let!(:session1) { test_user.sessions.create(name: 'First', amount: 5) }
+  let!(:session2) { test_user.sessions.create(name: 'Second', amount: 3) }
   let!(:session3) { test_user.sessions.create(name: 'Session', amount: 3) }
-  let!(:group) { Group.create(name: 'Group') }
+  let!(:group) { Group.create(name: 'Group', icon: "") }
 
   context 'validation' do
     it 'ensures name is present' do
@@ -36,18 +36,16 @@ RSpec.describe User, type: :model do
   end
 
   describe '#recent' do
-    let!(:session4) { test_user.sessions.create(name: 'Session', amount: 3) }
-    let!(:session5) { test_user.sessions.create(name: 'Session', amount: 3) }
-    let!(:session6) { test_user.sessions.create(name: 'Session', amount: 3) }
-    let!(:session7) { test_user.sessions.create(name: 'Session', amount: 3) }
     it 'returns a collection of the last 5 sessions' do
+      session4 = test_user.sessions.create(name: 'Session', amount: 3)
+      session5 = test_user.sessions.create(name: 'Session', amount: 3)
+      session6 = test_user.sessions.create(name: 'Session', amount: 3)
       group.sessions << session1
       group.sessions << session2
       group.sessions << session3
       group.sessions << session4
       group.sessions << session5
       group.sessions << session6
-      group.sessions << session7
       expect(test_user.recent.length).to eq(5)
     end
   end
@@ -56,7 +54,7 @@ RSpec.describe User, type: :model do
     it 'returns a collection of grouped sessions' do
       group.sessions << session1
       group.sessions << session2
-      expect(test_user.my_sessions).to be_a(Array)
+      expect(test_user.my_sessions.length).to eq(2)
     end
   end
 

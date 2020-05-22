@@ -1,11 +1,11 @@
 require 'rails_helper'
 
-RSpec.describe User, type: :model do
+RSpec.describe Session, type: :model do
   let!(:test_user) { User.create(name: 'Tom', username: 'tom') }
   let!(:session1) { test_user.sessions.create(name: 'Session', amount: 5) }
   let!(:session2) { test_user.sessions.create(name: 'Session', amount: 3) }
   let!(:session3) { test_user.sessions.create(name: 'Session', amount: 3) }
-  let!(:group) { Group.create(name: 'Group') }
+  let!(:group) { Group.create(name: 'Group', icon: "") }
 
   context 'validation' do
     it 'ensures name is present' do

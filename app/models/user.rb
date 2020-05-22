@@ -11,14 +11,6 @@ class User < ApplicationRecord
     username
   end
 
-  def recent
-    sessions.order(created_at: :desc).limit(5)
-  end
-
-  def recent_total
-    sessions.limit(5).sum(:amount)
-  end
-
   def my_sessions
     sessions.includes(:groups).select { |s| s.groups.any? }
   end
@@ -33,5 +25,13 @@ class User < ApplicationRecord
 
   def ext_sessions_total
     sessions.left_outer_joins(:groupings).where(groupings: { session_id: nil }).sum(:amount)
+  end
+
+  def recent
+    sessions.order(created_at: :desc).limit(5)
+  end
+
+  def recent_total
+    sessions.limit(5).sum(:amount)
   end
 end
