@@ -38,12 +38,32 @@ header {
   select {
     position: relative;
     display: block;
-    line-height: 1.2em;
-    padding-top: 0.7em;
-    padding-bottom: 0.7em;
+    line-height: 1.2em; 
+    padding: 0.7em;
+    margin-left: -0.7em;
     outline: none;
-    width: 80%;
-    background-color: white;
+    width: 100%;
+    box-sizing: border-box;
+
+    option {
+      
+
+      &:not(:first-child) {
+        padding: 0.7em;
+        background-color: rgb(223, 223, 223);
+        margin-left: 0.7em;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid lightgray;
+      }
+      &:first-child {
+        padding-top: 0.7em;
+        padding-bottom: 0.7em;
+        border-bottom: 0;
+
+      }
+    }
   }
 }
 

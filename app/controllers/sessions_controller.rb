@@ -40,7 +40,7 @@ class SessionsController < ApplicationController
 
   def groups_list
     @group_options = Group.all.map { |g| [g.name, g.name] }
-    @group_options.unshift(['Select a group', nil])
+    @group_options.unshift(['Select a group (optional)', nil])
   end
 
   def groups_clean
