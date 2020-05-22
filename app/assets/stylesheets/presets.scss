@@ -4,6 +4,7 @@ body {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   color: #434c55;
+  overflow: hidden;
 }
 
 header {
@@ -24,6 +25,10 @@ header {
     font-size: 1.3em;
     font-weight: 300;
   }
+}
+
+main {
+  overflow: hidden;
 }
 
 .nav__icon {
