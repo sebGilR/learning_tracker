@@ -4,7 +4,7 @@ class LoginsController < ApplicationController
   def new; end
 
   def create
-    user = User.find_by(username: params[:username])
+    user = User.find_by(login_params)
 
     if user.nil?
       flash.now[:alert] = 'Username is not valid'
@@ -18,5 +18,9 @@ class LoginsController < ApplicationController
   def destroy
     session[:username] = nil
     redirect_to root_url
+  end
+
+  def login_params
+    params.permit(:username)
   end
 end
