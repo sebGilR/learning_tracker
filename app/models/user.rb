@@ -12,7 +12,7 @@ class User < ApplicationRecord
   end
 
   def recent
-    sessions.limit(5)
+    sessions.order(created_at: :desc).limit(5)
   end
 
   def recent_total

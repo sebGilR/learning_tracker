@@ -6,7 +6,7 @@
   <% @groups.each do |g| %>
     <%= link_to group_path(g), class: "link" do %>
       <div class="group">
-        <%= image_tag(g.icon, class: "group__thumbnail", alt: "Group") %>
+        <%= image_tag g.icon, class: "group__thumbnail" , onerror: "this.error=null;this.src='https://placeimg.com/50/50/tech'" %>
         <div class="group__info">
           <h3><%= g.name %></h3>
           <span><%= g.created_at.strftime('%d %b %Y') %></span>

@@ -13,6 +13,8 @@
   </ul>
   <div class="form__fields">
     <%= f.text_field :name, placeholder: "Name" %>
+    <% @group.icon = "" %>
+    <%= f.text_field :icon, placeholder: "https://website.com/image.png" %>
   </div>
   
 <% end %>
