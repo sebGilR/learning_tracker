@@ -1,0 +1,30 @@
+<section class="side_panel" id="groups">
+  <h2 class="title">Groups</h2>
+  <%= link_to user_url(current_user) do %>
+    <i class="fas fa-arrow-left nav__icon"></i>
+  <% end %>
+  <div class="menu__list">
+    <% @groups.each do |g| %>
+      <%= link_to group_path(g), class: "link" do %>
+        <div class="group">
+          <%= image_tag g.icon, class: "group__thumbnail" , onerror: "this.error=null;this.src='https://placeimg.com/50/50/tech'" %>
+          <div class="group__info">
+            <h3><%= g.name %></h3>
+            <span><%= g.created_at.strftime('%d %b %Y') %></span>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    
+  </div>
+  <%= link_to "Create new", new_group_path, class: "new_group" %> 
+  
+</section>
+
+<div class="side_view">
+  <iframe title="My Sessions" src="/sessions?type=mysessions" >
+    <p>Placeholder text; only shows up if the page DOESN'T render!</p>
+  </iframe>
+  <%= link_to sessions_path(type: "mysessions") do %>
+  <% end %>
+</div>

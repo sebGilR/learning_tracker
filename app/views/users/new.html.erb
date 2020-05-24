@@ -1,0 +1,19 @@
+<%= form_with model: @user do |f| %>
+  <header>
+    <h1 class="title">Register</h1>
+    <%= link_to root_url do %>
+      <i class="fas fa-arrow-left nav__icon"></i>
+    <% end %>
+    <%= f.submit "Create user", disable_with: 'Submiting...' %>
+  </header>
+  <ul class="error_list">
+    <% @user.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+  <div class="form__fields">
+    <%= f.text_field :name, placeholder: "Name" %>
+    <%= f.text_field :username, placeholder: "Username" %>
+  </div>
+  
+<% end %>

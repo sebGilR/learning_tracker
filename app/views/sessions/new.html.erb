@@ -1,0 +1,19 @@
+<%= form_with model: @session do |f| %>
+  <header>
+    <h2 class="title">Log study session</h2>
+    <%= link_to user_url(current_user) do %>
+      <i class="fas fa-arrow-left nav__icon"></i>
+    <% end %>
+    <%= f.submit "Save", disable_with: 'Saving...' %>
+  </header>
+  <ul class="error_list">
+    <% @session.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+  <div class="form__fields">
+    <%= f.text_field :name, required: true, placeholder: "Name" %>
+    <%= f.number_field :amount, required: true, in: 1..10, step: 1, placeholder: "Number of pomodoros... (i.e: 1)" %>
+    <%= select_tag(:group, options_for_select(@group_options), size: 8)%>
+  </div>
+<% end %>
