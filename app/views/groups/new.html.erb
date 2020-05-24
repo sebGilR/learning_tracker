@@ -1,0 +1,20 @@
+<%= form_with model: @group do |f| %>
+  <header>
+    <h2 class="title">Create group</h2>
+    <%= link_to groups_path do %>
+        <i class="fas fa-arrow-left nav__icon"></i>
+      <% end %>
+    <%= f.submit "Create", disable_with: 'Creating...' %>
+  </header>
+  <ul class="error_list">
+    <% @group.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+  <div class="form__fields">
+    <%= f.text_field :name, placeholder: "Name" %>
+    <% @group.icon = "" %>
+    <%= f.text_field :icon, placeholder: "https://website.com/image.png" %>
+  </div>
+  
+<% end %>
