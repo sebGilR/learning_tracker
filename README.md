@@ -75,7 +75,7 @@ To get a local copy up and running follow these simple example steps.
 
 Download or clone this repo and cd into it.
 
-Instal gems with:
+Install gems with:
 
 ```
 bundle install
