@@ -1,0 +1,61 @@
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #434c55;
+  overflow: hidden;
+}
+
+header {
+  background-color: #3778c2;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  color: white;
+}
+
+header a,
+header input {
+  color: white;
+}
+
+header h1,
+header h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+main {
+  overflow: hidden;
+}
+
+.nav__icon {
+  position: absolute;
+  left: 0.8em;
+  top: 0.75em;
+}
+
+.error_list li,
+.alert {
+  display: block;
+  padding: 0.5em;
+  text-shadow: 0 0 1px lightcoral;
+}
+
+.error_list li::before,
+.alert::before {
+  content: '- ';
+  color: lightcoral;
+  text-shadow: 0 0 4px lightcoral;
+}
+
+.field_with_errors {
+  border-bottom: 1px solid lightcoral;
+  -webkit-box-shadow: 0 0 3px lightcoral;
+          box-shadow: 0 0 3px lightcoral;
+}
+
+.field_with_errors input {
+  padding-left: 0.5em;
+}
+/*# sourceMappingURL=presets.css.map */

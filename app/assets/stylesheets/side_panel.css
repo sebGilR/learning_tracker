@@ -1,0 +1,73 @@
+body,
+html {
+  max-height: 100vh;
+  overflow-x: hidden;
+}
+
+.side_panel {
+  background: #3778c2;
+  background: linear-gradient(11deg, #3778c2 0%, #1b3095 100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 3em 30% 1em 1em;
+  color: white;
+}
+
+.side_panel .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+}
+
+.side_panel .profile img {
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+.side_panel li:not(:last-child) a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.445);
+}
+
+.side_panel a {
+  display: inline-block;
+  margin-left: 1em;
+  color: white;
+  padding: 1em 0;
+  width: calc(100% - 2.5em);
+}
+
+.side_view {
+  width: 100%;
+  position: absolute;
+  right: -73%;
+  top: 3em;
+  bottom: 3em;
+  z-index: 0;
+}
+
+.side_view iframe {
+  position: relative;
+  height: 100%;
+  border: 0;
+}
+
+.side_view a {
+  display: block;
+  position: absolute;
+  height: 100%;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+}
+/*# sourceMappingURL=side_panel.css.map */

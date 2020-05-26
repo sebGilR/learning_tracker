@@ -1,0 +1,117 @@
+#groups {
+  overflow: hidden;
+}
+
+#groups .menu__list {
+  position: relative;
+  height: 80%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#groups .nav__icon {
+  top: 3.5em;
+  left: 2em;
+}
+
+#groups h2 {
+  text-align: center;
+}
+
+#groups .new_group {
+  display: block;
+  width: 60%;
+  text-align: center;
+  background-color: #5fb523;
+  padding: 0.5em;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 1.5em;
+  left: 0;
+}
+
+#groups .group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#groups .group__thumbnail {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: 1em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#groups .group__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: 1em;
+  width: 100%;
+}
+
+#groups .group__info span {
+  font-size: 0.8em;
+  margin-top: 5px;
+}
+
+#groups .group a:not(:nth-last-child(2)) .group__info {
+  border-bottom: 1px solid lightgray;
+}
+
+.sessions header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sessions .title {
+  padding: 0 1em;
+}
+
+.sessions .group__thumbnail {
+  margin-top: 0.5em;
+  border-radius: 50%;
+}
+
+.sessions .item {
+  width: 100%;
+}
+
+.sessions .item div {
+  padding: 0.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sessions .item__details {
+  border-top: 1px solid lightgray;
+  font-size: 80%;
+}
+
+.group__thumbnail {
+  width: 50px;
+  height: 50px;
+}
+/*# sourceMappingURL=groups.css.map */

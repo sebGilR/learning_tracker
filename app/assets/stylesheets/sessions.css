@@ -1,0 +1,124 @@
+.sessions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #f1f3f2;
+}
+
+.sessions header {
+  color: white;
+  margin: 0;
+}
+
+.sessions header a {
+  color: white;
+}
+
+.sessions header img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sessions__total {
+  padding: 1.2em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid lightgray;
+  -webkit-box-shadow: 0 1px 5px rgba(141, 141, 141, 0.178);
+          box-shadow: 0 1px 5px rgba(141, 141, 141, 0.178);
+  background-color: white;
+}
+
+.sessions__total span {
+  font-weight: bold;
+}
+
+.sessions__list {
+  padding: 0.7em 0.7em 5.8em 0.7em;
+  overflow-y: scroll;
+  position: relative;
+  bottom: 0;
+  height: calc(100% - 5.8em);
+}
+
+.sessions__list__item {
+  background-color: white;
+  margin-bottom: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5em;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 5px rgba(141, 141, 141, 0.178);
+          box-shadow: 0 1px 5px rgba(141, 141, 141, 0.178);
+}
+
+.sessions__list__item .item__info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  padding-top: 0.2em;
+  color: #878a8f;
+  font-weight: 400;
+}
+
+.sessions__list__item .item__info .amount {
+  position: absolute;
+  top: 0.2em;
+  right: 1em;
+}
+
+.sessions__list__item .item__info .date {
+  display: block;
+  border-top: 1px solid lightgray;
+  color: #989da3;
+  font-weight: 300;
+  font-size: 80%;
+}
+
+.sessions__list__item .item__info strong {
+  color: #434c55;
+}
+
+.sessions__list__item .item__info p {
+  margin-bottom: 0.5em;
+}
+
+.sessions__list__item img {
+  margin-right: 0.5em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.sessions .new {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  padding: 1em;
+  background-color: #60b524;
+  width: 100%;
+}
+
+.sessions .new__session {
+  display: block;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 1em;
+  color: white;
+}
+/*# sourceMappingURL=sessions.css.map */
