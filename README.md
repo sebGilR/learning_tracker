@@ -1,6 +1,6 @@
 # Learning Tracker
 
-> This is a learning tracker application that lets the user register learning sessions in terms of the number of Pomodoros per session. Sessions can also be included in groups when created, and new groups can be created as well.
+> This is a learning tracker application that lets the user register learning sessions in terms of the number of Pomodoros per session. Sessions can also be included in groups when creating them, and new groups can be created as well.
 
 ## Built With
 
@@ -27,8 +27,8 @@
 - They can create new groups or use existing groups.
 - The user can see a list of grouped sessions in "All my sessions".
 - The user can see a list of ungrouped sessions under "All my external sessions".
-- The user can access all existing groups and see the sessions that belong to that group, together with the author name, by clicking "All groups".
-- The user can see a list of their 5 most recently created sessions and a total of pomodoros for those sessions, and see if they are grouped or ungrupped under "Recent sessions".
+- The user can access all existing groups and see the sessions that belong to that group, together with the author's name, by clicking "All groups".
+- The user can see a list of their 5 most recently created sessions and a total of pomodoros for those sessions, and see if they are grouped or ungrouped under "Recent sessions".
 
 ## Usage
 
@@ -56,14 +56,14 @@ Logging a new study session:
 Creating a new group:
 1. Click "All groups" from the main profile page.
 2. Go to "Create new" at the bottom.
-3. Enter a name for the group, and optionally enter an image url (ending with png, jpg, jpeg, or gif). If no image url is provided a random image will show up for the group.
+3. Enter a name for the group, and optionally, enter an image URL (ending with png, jpg, jpeg, or gif). If no image URL is provided, a random image will show up for the group.
 4. Click "Create".
 
     ![image](public/group.png)
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps.
+To get a local copy up and running, follow the next steps:
 
 ### Prerequisites
 
@@ -73,7 +73,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-Download or clone this repo and cd into it.
+Download or clone this repo, and cd into it.
 
 Install gems with:
 
@@ -120,8 +120,6 @@ rpsec
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
 
 ## Show your support
 
