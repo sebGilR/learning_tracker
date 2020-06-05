@@ -30,6 +30,12 @@
 - The user can access all existing groups and see the sessions that belong to that group, together with the author's name, by clicking "All groups".
 - The user can see a list of their 5 most recently created sessions and a total of pomodoros for those sessions, and see if they are grouped or ungrouped under "Recent sessions".
 
+## Potential Features
+
+- Authentication with password.
+- Top of most active users.
+- Timeline with other user's activity.
+
 ## Usage
 
 Signing up:
