@@ -1,6 +1,6 @@
 # Learning Tracker
 
-> This is a learning tracker application that lets the user register learning sessions in terms of the number of Pomodoros per session. Sessions can also be included in groups when creating them, and new groups can be created as well.
+This is a learning tracker application that lets the user register learning sessions in terms of the number of Pomodoros per session. Sessions can also be included in groups when creating them, and new groups can be created as well.
 
 ## Built With
 
